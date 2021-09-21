@@ -1,11 +1,11 @@
-cms.controller("AnasayfaResim1KaydetGetir", function($scope, $http){
-    $scope.resim1Guncelle=function(){
+cms.controller("AnasayfaResim5KaydetGetir", function($scope, $http){
+    $scope.resim5Guncelle=function(){
         var request=$http({
             method: "post",
-            url: "galeri_1_kaydet_getir.php",
+            url: "galeri_5_kaydet_getir.php",
             data:{
-                form_resim1:$scope.form_resim1,
-                form_metin1=$scope.form_metin1
+                form_resim5:$scope.form_resim5,
+                form_metin5=$scope.form_metin5
             },
             headers:{
                 'Content-type':'application/x-www-form-urlencoded'
@@ -20,10 +20,10 @@ cms.controller("AnasayfaResim1KaydetGetir", function($scope, $http){
             }
         });
     }
-    $scope.resim1Sil=function(){
+    $scope.resim5Sil=function(){
         var request=$http({
             method: "post",
-            url: "galeri_1_sil_getir.php",
+            url: "galeri_5_sil_getir.php",
             headers:{
                 'Content-type':'application/x-www-form-urlencoded'
             }
@@ -31,8 +31,8 @@ cms.controller("AnasayfaResim1KaydetGetir", function($scope, $http){
         request.succes(function(data){
             if(data.durum){
                 alert("Kayıt silindi");
-                $scope.form_resim1="";
-                $scope.form_metin1="";
+                $scope.form_resim5="";
+                $scope.form_metin5="";
             }
             else{
                 alert("Hata! Tekrar dene...");
