@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <!-- FRAMEWORKS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <script src="js/angular.js"></script>
-    <script src="js/jquery-3.6.0.js"></script>
-    <script src="js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/angular.js"></script>
+    <script src="../js/jquery-3.6.0.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
     <!-- APPLICATION -->
     <script src="app.js"></script>
     <!-- ADMIN -->
@@ -26,6 +26,7 @@
     <script src="servis_galeri_2.js"></script>
     <script src="servis_galeri_3.js"></script>
     <script src="servis_galeri_4.js"></script>
+    <script src="servis_galeri_5.js"></script>
     <title>pinguXCMS</title>
 </head>
 <body ng-controller="GirisKontrol">
@@ -43,7 +44,7 @@
             <div class="form-group">
                 <label class="control-label col-sm-4">Şifre:</label>
                 <div class="col-lg-4">
-                    <input type="text" class="form-control" ng-model="form_sifre">
+                    <input type="password" class="form-control" ng-model="form_sifre">
                 </div>
             </div>
             <div class="form-group">

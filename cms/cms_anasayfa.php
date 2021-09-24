@@ -31,8 +31,8 @@ include "cms_anasayfa_veriler.php";
 <br>
 <div ng-controller="AnasayfaAciklamaKaydetGetir">
     <div>
-            <label>Açıklama<span class="label label-default">En fazla 250 karakter</span></label>
-            <textarea rows="4" class="form-control" ng-model="form_aciklama" ng-init="form_aciklama='<?php echo $aciklama[0]; ?>'" maxlength="500">
+            <label>Açıklama <span class="label label-default">En fazla 250 karakter</span></label>
+            <textarea rows="4" class="form-control" ng-model="form_aciklama" ng-init="form_aciklama='<?php echo $aciklama[0]; ?>'" maxlength="500"></textarea>
     </div>
     <br>
     <div class="pull-right">
@@ -42,7 +42,7 @@ include "cms_anasayfa_veriler.php";
 <br>
 <div ng-controller="AnasayfaCopyrightKaydetGetir">
     <div>
-        <label>Copyright<span class="label label-default">En fazla 100 karakter</span></label>
+        <label>Copyright <span class="label label-default">En fazla 100 karakter</span></label>
         <input type="text" class="form-control" ng-model="form_copyright" ng_init="form_copyright='<?php echo $copyright[0]; ?>'" maxlength="100">
     </div>
     <br>
@@ -52,7 +52,7 @@ include "cms_anasayfa_veriler.php";
 </div>
 <div ng-controller="AnasayfaFacebookKaydetGetir">
     <div>
-        <label>Facebook<span class="label label-default">En fazla 100 karakter</span></label>
+        <label>Facebook <span class="label label-default">En fazla 100 karakter</span></label>
         <input type="text" class="form-control" ng-model="form_facebook" ng_init="form_facebook='<?php echo $facebook[0]; ?>'" maxlength="100">
     </div>
     <br>
@@ -62,7 +62,7 @@ include "cms_anasayfa_veriler.php";
 </div>
 <div ng-controller="AnasayfaTwitterKaydetGetir">
     <div>
-        <label>Twitter<span class="label label-default">En fazla 100 karakter</span></label>
+        <label>Twitter <span class="label label-default">En fazla 100 karakter</span></label>
         <input type="text" class="form-control" ng-model="form_twitter" ng_init="form_twitter='<?php echo $twitter[0]; ?>'" maxlength="100">
     </div>
     <br>
@@ -72,7 +72,7 @@ include "cms_anasayfa_veriler.php";
 </div>
 <div ng-controller="AnasayfaInstagramKaydetGetir">
     <div>
-        <label>Instagram<span class="label label-default">En fazla 100 karakter</span></label>
+        <label>Instagram <span class="label label-default">En fazla 100 karakter</span></label>
         <input type="text" class="form-control" ng-model="form_instagram" ng_init="form_instagram='<?php echo $instagram[0]; ?>'" maxlength="100">
     </div>
     <br>

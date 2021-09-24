@@ -5,7 +5,7 @@ cms.controller("AnasayfaResim4KaydetGetir", function($scope, $http){
             url: "galeri_4_kaydet_getir.php",
             data:{
                 form_resim4:$scope.form_resim4,
-                form_metin4=$scope.form_metin4
+                form_metin4:$scope.form_metin4
             },
             headers:{
                 'Content-type':'application/x-www-form-urlencoded'

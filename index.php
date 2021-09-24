@@ -17,7 +17,7 @@
     ?>
     <title><?php echo $slogan[0]; ?></title>
 </head>
-<body ng-controller="IcerikDoldur">
+<body ng-controller="IcerikDoldur" ng-init="sosyal={facebookURL:'<?php echo $facebook[0]; ?>',twitterURL:'<?php echo $twitter[0]; ?>',instagramURL:'<?php echo $instagram[0]; ?>'}">
     <div class="container-fluid">
         <!--LOGO-->
         <header>
@@ -31,32 +31,18 @@
             </div>
         </header>
         <!--SLIDER-->
-        <div class="row">
+        <div class="row" ng-init="resimlerURL='<?php echo htmlspecialchars(json_encode($resim)) ?>';resimlerMetin='<?php echo htmlspecialchars(json_encode($metin)) ?>'">
             <div class="col-sm-12">
                 <br>
-                <div id="slayt" class="carousel-slide" data-ride="carousel">
+                <div id="slayt" class="carousel-slide" data-ride="carousel" data-interval="2000">
                     <ol class="carousel-indicators">
-                        <li data-target="#slayt" data-slide-to="1" class="active"></li>
-                        <li data-target="#slayt" data-slide-to="2"></li>
-                        <li data-target="#slayt" data-slide-to="3"></li>
+                        <li data-target="#slayt" ng-repeat="x in resimlerURL" data-ng-class="{active:$first}" data-slide-to="{{$index}}"></li>
                     </ol>
                     <div class="carousel-inner" role="listbox">
-                        <div class="item-active">
-                            <img src="img/slider/1.jpg" alt="r1">
+                        <div class="item" ng-repeat="x in resimlerURL" ng-class="{'active':$index==0}">
+                            <img ng-src="{{x}}" alt="slider">
                             <div class="carousel-caption">
-                                <h1><strong></strong></h1>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="img/slider/2.jpg" alt="r2">
-                            <div class="carousel-caption">
-                                <h1><strong></strong></h1>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="img/slider/3.jpg" alt="r3">
-                            <div class="carousel-caption">
-                                <h1><strong></strong></h1>
+                                <h1><strong>{{resimlerMetin[$index]}}</strong></h1>
                             </div>
                         </div>
                     </div>
@@ -86,9 +72,9 @@
                     <?php echo $copyright[0]; ?>
                 </div>
                 <div class="col-sm-6" style="text-align:right">
-                    <a href="<?php echo $facebook[0]; ?>" target="_blank"><img src="facebook.png" alt="face"></a>&nbsp;
-                    <a href="<?php echo $twitter[0]; ?>" target="_blank"><img src="twitter.png" alt="twitter"></a>&nbsp;
-                    <a href="<?php echo $instagram[0]; ?>" target="_blank"><img src="instagram.png" alt="instagram"></a>
+                    <a ng-if="sosyal.facebookURL!=''" href="<?php echo $facebook[0]; ?>" target="_blank"><img src="img/facebook.png" alt="face"></a>&nbsp;
+                    <a ng-if="sosyal.twitterURL!=''" href="<?php echo $twitter[0]; ?>" target="_blank"><img src="img/twitter.png" alt="twitter"></a>&nbsp;
+                    <a ng-if="sosyal.instagramURL!=''" href="<?php echo $instagram[0]; ?>" target="_blank"><img src="img/instagram.png" alt="instagram"></a>
                 </div>
             </div>
         </div>

@@ -3,6 +3,7 @@ cms.controller("GirisKontrol", function($scope, $http){
     $scope.cmsPaneliGoruntulemeDurumu=false;
 
     $scope.bigileriKontrolEt=function(){
+        alert("başladı");
         var request=$http({
             method:"post",
             url: "giris.php",
@@ -11,10 +12,11 @@ cms.controller("GirisKontrol", function($scope, $http){
                 form_sifre:$scope.form_sifre
             },
             headers:{
-                'Content-type':'application/x-www-form-urlencoded'
+                "Content-type":"application/x-www-form-urlencoded"
             }
         });
         request.success(function(data){
+            alert("OK");
             if(data.baglantiDurumu){
                 $scope.formGoruntulemeDurumu=false;
                 $scope.cmsPaneliGoruntulemeDurumu=true;
