@@ -2,8 +2,7 @@ cms.controller("GirisKontrol", function($scope, $http){
     $scope.formGoruntulemeDurumu=true;
     $scope.cmsPaneliGoruntulemeDurumu=false;
 
-    $scope.bigileriKontrolEt=function(){
-        alert("başladı");
+    $scope.bilgileriKontrolEt=function(){
         var request=$http({
             method:"post",
             url: "giris.php",
@@ -15,12 +14,11 @@ cms.controller("GirisKontrol", function($scope, $http){
                 "Content-type":"application/x-www-form-urlencoded"
             }
         });
-        request.success(function(data){
-            alert("OK");
-            if(data.baglantiDurumu){
+        request.then(function(data){
+            if(data.data.baglantiDurumu){
                 $scope.formGoruntulemeDurumu=false;
                 $scope.cmsPaneliGoruntulemeDurumu=true;
-                $scope.hosgeldinMesaji="Hoşgeldin"+$scope.form_kullaniciadi;
+                $scope.hosgeldinMesaji="Hoşgeldin "+$scope.form_kullaniciadi;
             }
             else{
                 $scope.form_kullaniciadi="";

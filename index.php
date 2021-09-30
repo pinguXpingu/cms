@@ -46,11 +46,11 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#slayt" class="left carousel-control" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <a href="#slayt" class="carousel-control-prev" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     </a>
-                    <a href="#slayt" class="right carousel-control" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <a href="#slayt" class="carousel-control-next" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     </a>
                 </div>
             </div>

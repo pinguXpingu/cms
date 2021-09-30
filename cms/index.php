@@ -31,7 +31,7 @@
 </head>
 <body ng-controller="GirisKontrol">
     <div class="well well-sm">CMS Paneli
-        <div class="pull-right">{{hosgeldinMesaji}}</div>
+        <div class="float-right">{{hosgeldinMesaji}}</div>
     </div>
     <div ng-show="formGoruntulemeDurumu">
         <form class="form-horizontal" role="form" ng-submit="bilgileriKontrolEt()">
@@ -56,19 +56,19 @@
     </div>
     <div ng-show="cmsPaneliGoruntulemeDurumu">
         <div class="container">
-            <ul class="nav nav-tabs">
-                <li class="active">
-                    <a data-toggle="tab" href="#cms_anasayfa">Anasayfa</a>
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#cms-anasayfa" role="tab">Anasayfa</a>
                 </li>
-                <li>
-                    <a data-toggle="tab" href="#cms_galeri">Galeri</a>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-toggle="tab" href="#cms-galeri" role="tab">Galeri</a>
                 </li>
             </ul>
             <div class="tab-content">
-                <div id="cms-anasayfa" class="tab-pane fade in active">
+                <div id="cms-anasayfa" class="tab-pane fade show active" role="tabpanel">
                     <div ng-include="'cms_anasayfa.php'"></div>
                 </div>
-                <div id="cms-galeri" class="tab-pane fade">
+                <div id="cms-galeri" class="tab-pane fade" role="tabpanel">
                     <div ng-include="'cms_galeri.php'"></div>
                 </div>
             </div>
