@@ -11,8 +11,8 @@ cms.controller("AnasayfaLogoKaydetGetir", function($scope, $http){
             }
         });
 
-        request.success(function(data){
-            if(data.durum){
+        request.then(function(data){
+            if(data.data.durum){
                 alert("Veri kaydedildi");
                 $scope.resim_logo=$scope.form_logo;
             }

@@ -11,8 +11,8 @@ cms.controller("AnasayfaResim1KaydetGetir", function($scope, $http){
                 'Content-type':'application/x-www-form-urlencoded'
             }
         });
-        request.succes(function(data){
-            if(data.durum){
+        request.then(function(data){
+            if(data.data.durum){
                 alert("Veri kaydedildi");
             }
             else{
@@ -28,8 +28,8 @@ cms.controller("AnasayfaResim1KaydetGetir", function($scope, $http){
                 'Content-type':'application/x-www-form-urlencoded'
             }
         });
-        request.succes(function(data){
-            if(data.durum){
+        request.then(function(data){
+            if(data.data.durum){
                 alert("Kayıt silindi");
                 $scope.form_resim1="";
                 $scope.form_metin1="";

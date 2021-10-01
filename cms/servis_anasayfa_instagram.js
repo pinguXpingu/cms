@@ -11,8 +11,8 @@ cms.controller("AnasayfaInstagramKaydetGetir", function($scope, $http){
             }
         });
 
-        request.success(function(data){
-            if(data.durum){
+        request.then(function(data){
+            if(data.data.durum){
                 alert("Veri kaydedildi");
             }
             else{
