@@ -32,9 +32,9 @@
         </header>
         <!--SLIDER-->
         <div class="row" ng-init="resimlerURL=<?php echo htmlspecialchars(json_encode($resim)) ?>;resimlerMetin=<?php echo htmlspecialchars(json_encode($metin)) ?>">
-          <div class="col-sm-6 offset-sm-3">
+          <div class="col-sm-8 offset-sm-2">
                 <br>
-                <div id="slayt" class="carousel-slide" data-ride="carousel" data-interval="2000">
+                <div id="slayt" class="carousel slide" data-ride="carousel" data-interval="2000">
                     <ol class="carousel-indicators">
                         <li data-target="#slayt" ng-repeat="x in resimlerURL track by $index" data-ng-class="{active:$first}" data-slide-to="{{$index}}"></li>
                     </ol>
@@ -74,9 +74,9 @@
                     <?php echo $copyright[0]; ?>
                 </div>
                 <div class="col-sm-6" style="text-align:right">
-                    <a ng-if="sosyal.facebookURL!=''" href="<?php echo $facebook[0]; ?>" target="_blank"><img src="img/facebook.png" alt="face" width="32px"></a>&nbsp;
-                    <a ng-if="sosyal.twitterURL!=''" href="<?php echo $twitter[0]; ?>" target="_blank"><img src="img/twitter.png" alt="twitter" width="32px"></a>&nbsp;
-                    <a ng-if="sosyal.instagramURL!=''" href="<?php echo $instagram[0]; ?>" target="_blank"><img src="img/instagram.png" alt="instagram" width="32px"></a>
+                    <a ng-if="sosyal.facebookURL!=''" href="https://<?php echo $facebook[0]; ?>" target="_blank"><img src="img/facebook.png" alt="face" width="32px"></a>&nbsp;
+                    <a ng-if="sosyal.twitterURL!=''" href="https://<?php echo $twitter[0]; ?>" target="_blank"><img src="img/twitter.png" alt="twitter" width="32px"></a>&nbsp;
+                    <a ng-if="sosyal.instagramURL!=''" href="https://<?php echo $instagram[0]; ?>" target="_blank"><img src="img/instagram.png" alt="instagram" width="32px"></a>
                 </div>
             </div>
         </div>
